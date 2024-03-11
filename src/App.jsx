@@ -1,10 +1,16 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ProductListPage from './components/ProductList'
 
 function App() {
 
   return (
     <div>
-      Redux thunk
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<ProductListPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
